@@ -48,6 +48,7 @@ function Main() {
 					</div>
 					<div className='main__week'>
 						<h4 className='main__week-title'>Неделя</h4>
+                        <div className="main__week-cards"></div>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,81 @@
+.main {
+	display: flex;
+	background-color: rgb(150, 152, 230);
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.main__today {
+	margin: 0;
+	font-size: 40px;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 50px;
+}
+.main__date {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 400;
+}
+.main__degrees {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.main__degrees-image {
+	height: 128px;
+	width: 128px;
+}
+.main__degrees-number {
+	font-size: 110px;
+	font-weight: 500;
+	letter-spacing: -5px;
+	margin: 0;
+}
+.main__place {
+	align-self: baseline;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+.main__info {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+.main__info-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 45%;
+	background-color: wheat;
+	border: 1px solid red;
+}
+.main__cards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+.main__card {
+	margin: 30px;
+	height: 180px;
+	width: 180px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 15px;
+	background-color: white;
+	padding: 15px;
+}
+.main__card-title {
+	margin-bottom: 20px;
+	font-size: 23px;
+	font-weight: 500;
+}
+.main__card-info {
+	font-size: 30px;
+	font-weight: 500;
+}

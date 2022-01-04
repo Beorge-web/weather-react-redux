@@ -1,0 +1,79 @@
+.header {
+	display: flex;
+	min-height: 60px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: antiquewhite;
+	align-items: center;
+	justify-content: row;
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16x;
+	justify-content: space-between;
+}
+.header__logo {
+	display: flex;
+	justify-content: row;
+}
+.header__logo-base {
+	height: 40px;
+	width: 40px;
+	margin-left: 40px;
+}
+.header__logo-name {
+	margin: 0;
+	margin-left: 10px;
+}
+.header__menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.header__menu-items {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+}
+.header__menu-item {
+	margin-right: 10px;
+	cursor: pointer;
+}
+.header__menu-item:hover {
+	opacity: 0.7;
+}
+.header__search-form {
+	display: flex;
+	border-radius: 6px;
+	background-color: rgba(136, 128, 128, 0.527);
+	margin-right: 40px;
+	margin-left: 30px;
+	align-items: center;
+}
+.header__input {
+	height: 30px;
+	border-color: bisque;
+	box-shadow: none;
+	padding: 0;
+	cursor: pointer;
+	border-style: solid;
+	background-color: transparent;
+	border: none;
+	padding-left: 5px;
+}
+.header__input:focus {
+	outline: none;
+}
+.header__serach-button {
+	border: none;
+	background-color: transparent;
+	background-image: url(../../images/iconmonstr-search-thin.svg);
+	height: 20px;
+	width: 20px;
+	padding: 0;
+	margin-right: 10px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}

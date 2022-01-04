@@ -15,7 +15,7 @@ function Main() {
 						</div>
 						<div className='main__card'>
 							<div className='main__card-title'>Температура</div>
-							<div className='main__card-info'>-18с`</div>
+							<div className='main__card-info'>-18с°</div>
 						</div>
 						<div className='main__card'>
 							<div className='main__card-title'>Давление</div>
@@ -48,7 +48,43 @@ function Main() {
 					</div>
 					<div className='main__week'>
 						<h4 className='main__week-title'>Неделя</h4>
-                        <div className="main__week-cards"></div>
+						<div className='main__week-cards'>
+							<div className='main__week-card'>
+								<div className='main__week-day'>Wed</div>
+								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
+								<div className='main__week-deg'>19°</div>
+							</div>
+							<div className='main__week-card'>
+								<div className='main__week-day'>Wed</div>
+								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
+								<div className='main__week-deg'>19°</div>
+							</div>
+							<div className='main__week-card'>
+								<div className='main__week-day'>Wed</div>
+								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
+								<div className='main__week-deg'>19°</div>
+							</div>
+							<div className='main__week-card'>
+								<div className='main__week-day'>Wed</div>
+								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
+								<div className='main__week-deg'>19°</div>
+							</div>
+							<div className='main__week-card'>
+								<div className='main__week-day'>Wed</div>
+								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
+								<div className='main__week-deg'>19°</div>
+							</div>
+							<div className='main__week-card'>
+								<div className='main__week-day'>Wed</div>
+								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
+								<div className='main__week-deg'>19°</div>
+							</div>
+							<div className='main__week-card'>
+								<div className='main__week-day'>Wed</div>
+								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
+								<div className='main__week-deg'>19°</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

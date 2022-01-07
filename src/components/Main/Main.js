@@ -1,14 +1,22 @@
 import { useSelector } from 'react-redux';
 import MainCard from '../MainCard/MainCard';
-
+import DayCard from '../WeatherToday/DayCard';
+import cloudIcon from '../../images/cloud-icon.svg';
+import humIcon from '../../images/hum-icon.svg';
+import precipIcon from '../../images/precip-icon.svg';
+import tempIcon from '../../images/temp-icon.svg';
+import windIcon from '../../images/wind-icon.svg';
+import visionIcon from '../../images/vision-icon.svg';
 function Main() {
 	const weather = useSelector((state) => {
 		const { weatherReducer } = state;
 		return weatherReducer.data;
 	});
-
-	// { place, cloud, time, country, feelslike, gust, humidity, is_day, temp, wind, wind_dir, condition } = weather;
-
+	const forecast = useSelector((state) => {
+		const { weatherReducer } = state;
+		return weatherReducer.forecast;
+	});
+	console.log(!!forecast);
 	return (
 		<div className='main'>
 			{/* <div className='main__title'>
@@ -18,12 +26,24 @@ function Main() {
 				<div className='main__info-column'>
 					<div className='main__info-title'></div>
 					<div className='main__cards'>
-						<MainCard name='Ветер' number={weather.wind} text='км/ч' add={weather.wind_dir} />
-						<MainCard name='Температура' number={weather.temp} text='с°' add={`По ощущению ${weather.feelslike}`} />
-						<MainCard name='Влажность' number={weather.humidity} text='%' add={''} />
-						<MainCard name='Облачность' number={weather.cloud} text='%' add={''} precip />
-						<MainCard name='Осадки' number={weather.precip} text='мм' add={''} />
-						<MainCard name='Видимость' number={weather.vis_km} text='км' add={''} />
+						<MainCard name='Ветер' number={weather.wind} text='км/ч' add={weather.wind_dir} icon={windIcon} />
+						<MainCard name='Температура' number={weather.temp} text='с°' add={`${weather.feelslike}`} icon={tempIcon} />
+						<MainCard name='Влажность' number={weather.humidity} text='%' add={''} icon={humIcon} />
+						<MainCard name='Облачность' number={weather.cloud} text='%' add={''} icon={cloudIcon} />
+						<MainCard name='Осадки' number={weather.precip} text='мм' add={''} icon={precipIcon} />
+						<MainCard name='Видимость' number={weather.vis_km} text='км' add={''} icon={visionIcon} />
+					</div>
+					<div className='main__week'>
+						<h4 className='main__week-title'>Прогноз</h4>
+						<div className='main__day-cards'>
+							{!!forecast
+								? forecast
+										.slice(0)
+										.map((day) => (
+											<DayCard key={day.id} day={day.day} img={day.img} temp={day.temp} precip={day.rain > day.snow ? day.rain : day.snow} />
+										))
+								: null}
+						</div>
 					</div>
 				</div>
 				<div className='main__info-column'>
@@ -31,51 +51,12 @@ function Main() {
 						{weather.place},
 						<br /> {weather.country}
 					</h4>
-					<h3 className='main__today'>Сегодня</h3>
+					<h3 className='main__today'>Сейчас</h3>
 					<p className='main__date'>{weather.time}</p>
+					<p className='main__condition'>{!!weather.condition ? weather.condition.text : null}</p>
 					<div className='main__degrees'>
 						<img className='main__degrees-image' src={!!weather.condition ? `https:${weather.condition.icon}` : null} alt='' />
 						<p className='main__degrees-number'>{weather.temp}</p>
-					</div>
-					<div className='main__week'>
-						<h4 className='main__week-title'>Неделя</h4>
-						<div className='main__week-cards'>
-							<div className='main__week-card'>
-								<div className='main__week-day'>Wed</div>
-								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
-								<div className='main__week-deg'>19°</div>
-							</div>
-							<div className='main__week-card'>
-								<div className='main__week-day'>Wed</div>
-								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
-								<div className='main__week-deg'>19°</div>
-							</div>
-							<div className='main__week-card'>
-								<div className='main__week-day'>Wed</div>
-								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
-								<div className='main__week-deg'>19°</div>
-							</div>
-							<div className='main__week-card'>
-								<div className='main__week-day'>Wed</div>
-								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
-								<div className='main__week-deg'>19°</div>
-							</div>
-							<div className='main__week-card'>
-								<div className='main__week-day'>Wed</div>
-								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
-								<div className='main__week-deg'>19°</div>
-							</div>
-							<div className='main__week-card'>
-								<div className='main__week-day'>Wed</div>
-								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
-								<div className='main__week-deg'>19°</div>
-							</div>
-							<div className='main__week-card'>
-								<div className='main__week-day'>Wed</div>
-								<img src='https://cdn.weatherapi.com/weather/64x64/day/113.png' alt='Иконка погоды' />
-								<div className='main__week-deg'>19°</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>

@@ -5,13 +5,13 @@ class Api {
 		this._key = config.key;
 	}
 	getCityWeather(place) {
-		return fetch(this._url + 'key=' + this._key + '&q=' + place, {
+		return fetch(this._url + 'key=' + this._key + '&q=' + place + '&lang=ru&days=3', {
 			method: 'GET',
 			headers: this._headers,
 		}).then((res) => this._getResponseData(res));
 	}
 	getInitialWeather() {
-		return fetch(this._url + 'key=' + this._key + '&q=auto:ip&lang=ru', {
+		return fetch(this._url + 'key=' + this._key + '&q=auto:ip&lang=ru&days=3', {
 			method: 'GET',
 			headers: this._headers,
 		})
@@ -29,7 +29,7 @@ class Api {
 }
 
 const apiData = {
-	url: 'http://api.weatherapi.com/v1/current.json?',
+	url: 'http://api.weatherapi.com/v1/forecast.json?',
 	headers: {
 		'Content-Type': 'application/json',
 	},

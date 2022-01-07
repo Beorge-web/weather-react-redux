@@ -1,5 +1,11 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import header__logo from '../../images/app-logo-snow.svg';
+import { searchWeather } from '../../redux/actions';
 function Header() {
+	const dispatch = useDispatch();
+	const [input, setInput] = useState('');
+	console.log(input);
 	return (
 		<div className='header'>
 			<div className='header__logo'>
@@ -16,9 +22,18 @@ function Header() {
 					className='header__search-form'
 					onSubmit={(e) => {
 						e.preventDefault();
-						console.log('submit');
+						dispatch(searchWeather(input));
+						setInput('');
 					}}>
-					<input className='header__input' type='text' placeholder='Город' />
+					<input
+						className='header__input'
+						type='text'
+						placeholder='Город'
+						value={input}
+						onChange={(e) => {
+							setInput(e.target.value);
+						}}
+					/>
 					<button className='header__serach-button' type='submit'></button>
 				</form>
 			</nav>

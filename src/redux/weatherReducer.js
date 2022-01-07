@@ -1,12 +1,22 @@
-import { WEATHER_INITIAL } from './types';
+import { WEATHER } from './types';
 
 const initialState = {
 	data: {},
 };
 export const weatherReducer = (state = initialState, action) => {
-	console.log('action', action);
+	console.log(action);
 	switch (action.type) {
-		case WEATHER_INITIAL:
+		case WEATHER:
+			const forecast = action.data.forecast.forecastday.map((d) => {
+				return {
+					day: d.date,
+					img: d.day.condition.icon,
+					temp: d.day.avgtemp_c,
+					rain: d.day.daily_chance_of_rain,
+					snow: d.day.daily_chance_of_snow,
+					id: d.date_epoch,
+				};
+			});
 			const newWeather = {
 				place: action.data.location.name,
 				time: action.data.location.localtime,
@@ -28,6 +38,7 @@ export const weatherReducer = (state = initialState, action) => {
 			return {
 				...state,
 				data: newWeather,
+				forecast,
 			};
 		default:
 			return state;

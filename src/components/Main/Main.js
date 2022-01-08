@@ -54,11 +54,13 @@ function Main() {
 					<div className='main__degrees'>
 						<img className='main__degrees-image' src={!!weather.condition ? `https:${weather.condition.icon}` : null} alt='' />
 						<p className='main__degrees-number'>{weather.temp}</p>
+						<br />
 					</div>
-					<div className='main__cards'>
+					<div className='main__cards main__cards_today '>
 						{!!forecast ? <MainCard name='Восход солнца' number={forecast[0].sunrise} text='' add='' icon='' /> : null}
-						<MainCard name='Ощущается как' number={Math.round(weather.feelslike)} text='с°' add={``} icon='' />
+
 						{!!forecast ? <MainCard name='Закат солнца' number={forecast[0].sunset} text='' add='' icon='' /> : null}
+						<MainCard name='Ощущается как' number={Math.round(weather.feelslike)} text='с°' add={``} icon='' />
 					</div>
 				</div>
 			</div>

@@ -7,6 +7,7 @@ import precipIcon from '../../images/precip-icon.svg';
 import tempIcon from '../../images/temp-icon.svg';
 import windIcon from '../../images/wind-icon.svg';
 import visionIcon from '../../images/vision-icon.svg';
+
 function Main() {
 	const weather = useSelector((state) => {
 		const { weatherReducer } = state;
@@ -16,22 +17,20 @@ function Main() {
 		const { weatherReducer } = state;
 		return weatherReducer.forecast;
 	});
-	console.log(!!forecast);
+	console.log(weather);
+
 	return (
 		<div className='main'>
-			{/* <div className='main__title'>
-				<h1 className='main__title-text'>Погода в Москве сейчас</h1>
-			</div> */}
 			<div className='main__info'>
 				<div className='main__info-column'>
 					<div className='main__info-title'></div>
 					<div className='main__cards'>
 						<MainCard name='Ветер' number={weather.wind} text='км/ч' add={weather.wind_dir} icon={windIcon} />
-						<MainCard name='Температура' number={weather.temp} text='с°' add={`${weather.feelslike}`} icon={tempIcon} />
-						<MainCard name='Влажность' number={weather.humidity} text='%' add={''} icon={humIcon} />
-						<MainCard name='Облачность' number={weather.cloud} text='%' add={''} icon={cloudIcon} />
-						<MainCard name='Осадки' number={weather.precip} text='мм' add={''} icon={precipIcon} />
-						<MainCard name='Видимость' number={weather.vis_km} text='км' add={''} icon={visionIcon} />
+						<MainCard name='Давление' number={Math.round(weather.pressure)} text='мм. рт. ст.' add='' icon={tempIcon} />
+						<MainCard name='Влажность' number={weather.humidity} text='%' add='' icon={humIcon} />
+						<MainCard name='Облачность' number={weather.cloud} text='%' add='' icon={cloudIcon} />
+						<MainCard name='Осадки' number={weather.precip} text='мм' add='' icon={precipIcon} />
+						<MainCard name='Видимость' number={weather.vis_km} text='км' add='' icon={visionIcon} />
 					</div>
 					<div className='main__week'>
 						<h4 className='main__week-title'>Прогноз</h4>
@@ -52,11 +51,16 @@ function Main() {
 						<br /> {weather.country}
 					</h4>
 					<h3 className='main__today'>Сейчас</h3>
-					<p className='main__date'>{weather.time}</p>
+					{/* <p className='main__date'>{weather.time}</p> */}
 					<p className='main__condition'>{!!weather.condition ? weather.condition.text : null}</p>
 					<div className='main__degrees'>
 						<img className='main__degrees-image' src={!!weather.condition ? `https:${weather.condition.icon}` : null} alt='' />
 						<p className='main__degrees-number'>{weather.temp}</p>
+					</div>
+					<div className='main__cards'>
+						{!!forecast ? <MainCard name='Восход солнца' number={forecast[0].sunrise} text='' add='' icon='' /> : null}
+						<MainCard name='Ощущается как' number={Math.round(weather.feelslike)} text='с°' add={``} icon='' />
+						{!!forecast ? <MainCard name='Закат солнца' number={forecast[0].sunset} text='' add='' icon='' /> : null}
 					</div>
 				</div>
 			</div>

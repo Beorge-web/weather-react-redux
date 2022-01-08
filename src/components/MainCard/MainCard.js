@@ -4,7 +4,7 @@ function MainCard({ name, number, text, add, icon }) {
 			<div className='main__card-title'>{name}</div>
 			<div className='main__card-info'>{number + ' ' + text}</div>
 			<div className='main__card-add'>{add}</div>
-			<img className='main__card-img' src={icon} alt={`Иконка ${name}`} />
+			{icon === '' ? '' : <img className='main__card-img' src={icon} alt={`Иконка ${name}`} />}
 		</div>
 	);
 }

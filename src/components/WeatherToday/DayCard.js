@@ -1,4 +1,4 @@
-import { format, parse } from 'date-fns';
+import { format } from 'date-fns';
 import { ru } from 'date-fns/locale';
 function DayCard({ day, img, temp, precip }) {
 	let date = format(new Date(day), 'EEEEEE dd MMMM', { locale: ru });

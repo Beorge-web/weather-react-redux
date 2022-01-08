@@ -15,6 +15,10 @@ export const weatherReducer = (state = initialState, action) => {
 					rain: d.day.daily_chance_of_rain,
 					snow: d.day.daily_chance_of_snow,
 					id: d.date_epoch,
+					sunset: d.astro.sunset,
+					sunrise: d.astro.sunrise,
+					maxtemp: d.day.maxtemp_c,
+					mintemp: d.day.mintemp_c,
 				};
 			});
 			const newWeather = {
@@ -33,8 +37,8 @@ export const weatherReducer = (state = initialState, action) => {
 				temp: action.data.current.temp_c,
 				precip: action.data.current.precip_mm,
 				vis_km: action.data.current.vis_km,
+				pressure: action.data.current.pressure_mb / (1 + 1/3),
 			};
-			console.log('new', newWeather);
 			return {
 				...state,
 				data: newWeather,

@@ -15,10 +15,11 @@ function Header() {
 			<nav className='header__menu'>
 				<ul className='header__menu-items'>
 					{/* <li className='header__menu-item'>Главная</li> */}
-					<li className='header__menu-item'>Погода сегодня</li>
-					<li className='header__menu-item'>Карта осадков</li>
+					{/* <li className='header__menu-item'>Погода сегодня</li>
+					<li className='header__menu-item'>Карта осадков</li> */}
 				</ul>
 				<form
+					title='Введите город для поиска'
 					className='header__search-form'
 					onSubmit={(e) => {
 						e.preventDefault();

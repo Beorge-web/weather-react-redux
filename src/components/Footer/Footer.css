@@ -1,0 +1,30 @@
+.footer {
+	display: flex;
+	background-color: #333866;
+	padding: 30px 50px 10px;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer__icon {
+	height: 40px;
+	width: 40px;
+}
+.footer__author {
+	display: flex;
+	color: #fff;
+	text-decoration: none;
+	align-items: center;
+}
+.footer__author:hover {
+	opacity: 0.6;
+}
+.footer__text {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.footer__api {
+	display: flex;
+	background-color: #b4b9d1;
+	border-radius: 10px;
+	padding: 0 10px 0 0;
+}

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/weather-react-redux/static/css/main.5c62de1e.css",
+    "main.js": "/weather-react-redux/static/js/main.40d890e3.js",
+    "static/media/Inter-Bold.woff": "/weather-react-redux/static/media/Inter-Bold.93c1301bd9f486c573b3.woff",
+    "static/media/Inter-Medium.woff?v=3.16": "/weather-react-redux/static/media/Inter-Medium.4df6dba05b1c806c2ad2.woff",
+    "static/media/Inter-SemiBold.woff": "/weather-react-redux/static/media/Inter-SemiBold.cca62d21c8c555c392e5.woff",
+    "static/media/Inter-Regular.woff?v=3.15": "/weather-react-redux/static/media/Inter-Regular.e148c4a1158f8cee8285.woff",
+    "static/media/Inter-Bold.woff2": "/weather-react-redux/static/media/Inter-Bold.ec64ea577b0349e055ad.woff2",
+    "static/media/Inter-Medium.woff2?v=3.16": "/weather-react-redux/static/media/Inter-Medium.e41558d33c730e5ed035.woff2",
+    "static/media/Inter-SemiBold.woff2": "/weather-react-redux/static/media/Inter-SemiBold.b5f0f109bc88052d4000.woff2",
+    "static/media/Inter-Regular.woff2?v=3.15": "/weather-react-redux/static/media/Inter-Regular.26a30a5f1103393aac70.woff2",
+    "static/media/app-logo-snow.svg": "/weather-react-redux/static/media/app-logo-snow.d0bb8c70caae880274159c32c6dbd801.svg",
+    "static/media/temp-icon.svg": "/weather-react-redux/static/media/temp-icon.7becd0915440fde7a596a7187f60b1ae.svg",
+    "static/media/precip-icon.svg": "/weather-react-redux/static/media/precip-icon.86ebd50d32f26ef64e4048fb5fffe101.svg",
+    "static/media/vision-icon.svg": "/weather-react-redux/static/media/vision-icon.198402d9b6c2a9bfcb612a4eb3b20748.svg",
+    "static/media/wind-icon.svg": "/weather-react-redux/static/media/wind-icon.febd9a2cc82ffade3cdfa335466f4428.svg",
+    "static/media/cloud-icon.svg": "/weather-react-redux/static/media/cloud-icon.c0ae4463d726f7e5b4ed57b1e11549e1.svg",
+    "static/media/hum-icon.svg": "/weather-react-redux/static/media/hum-icon.b7cbbdc0b60e37ae5467a8bda66a143f.svg",
+    "index.html": "/weather-react-redux/index.html",
+    "static/media/iconmonstr-search-thin.svg": "/weather-react-redux/static/media/iconmonstr-search-thin.65a7fd1428ac118d9cf1.svg",
+    "main.5c62de1e.css.map": "/weather-react-redux/static/css/main.5c62de1e.css.map",
+    "main.40d890e3.js.map": "/weather-react-redux/static/js/main.40d890e3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c62de1e.css",
+    "static/js/main.40d890e3.js"
+  ]
+}

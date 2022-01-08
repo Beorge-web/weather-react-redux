@@ -53,7 +53,7 @@ function Main() {
 					<p className='main__condition'>{!!weather.condition ? weather.condition.text : null}</p>
 					<div className='main__degrees'>
 						<img className='main__degrees-image' src={!!weather.condition ? `https:${weather.condition.icon}` : null} alt='' />
-						<p className='main__degrees-number'>{weather.temp}</p>
+						<p className='main__degrees-number'>{Math.round(weather.temp)}</p>
 						<br />
 					</div>
 					<div className='main__cards main__cards_today '>

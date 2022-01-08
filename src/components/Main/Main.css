@@ -1,10 +1,12 @@
 .main {
 	display: flex;
 	background-color: #e5e8ff;
-	width: 90%;
+
 	margin-right: auto;
 	margin-left: auto;
 	color: #333866;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 .main__today {
 	margin: 0;

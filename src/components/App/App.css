@@ -18,4 +18,6 @@ html {
 }
 .root {
 	background-color: #e5e8ff;
+	min-height: 100vh;
+	background-color: #333866;
 }

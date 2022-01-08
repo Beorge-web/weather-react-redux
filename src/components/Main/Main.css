@@ -71,17 +71,15 @@
 	flex-wrap: wrap;
 	padding: 10px;
 	width: 100%;
+	justify-content: center;
 }
 .main__cards_today {
-	width: 70%;
-	flex-direction: row;
+	width: 80%;
 }
 .main__card {
 	position: relative;
-	margin: 0 20px 20px;
+	margin: 10px;
 	width: 150px;
-	margin-right: auto;
-	margin-left: auto;
 	border-radius: 15px;
 	background-color: #fff;
 	padding: 15px;

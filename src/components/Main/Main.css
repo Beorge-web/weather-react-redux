@@ -1,7 +1,7 @@
 .main {
 	display: flex;
 	background-color: #e5e8ff;
-
+	min-height: calc(100vh - 104px);
 	margin-right: auto;
 	margin-left: auto;
 	color: #333866;

@@ -7,6 +7,7 @@
 	color: #333866;
 	padding-left: 5%;
 	padding-right: 5%;
+	justify-content: center;
 }
 .main__today {
 	margin: 0;
@@ -77,21 +78,20 @@
 	width: 75%;
 }
 .main__card {
-	position: relative;
+	display: flex;
+	flex-direction: column;
 	margin: 10px;
 	width: 150px;
 	border-radius: 15px;
 	background-color: #fff;
 	padding: 15px;
 	border: 3px solid #b4b9d1;
-	min-height: 130px;
 }
 .main__card-img {
-	position: absolute;
 	height: 35px;
 	width: 35px;
-	bottom: 10px;
-	right: 10px;
+	margin-left: auto;
+	margin-top: auto;
 }
 .main__card-add {
 	margin-top: 10px;
@@ -146,13 +146,17 @@
 	.main__info {
 		flex-direction: column-reverse;
 		align-items: center;
+		min-width: 300px;
+		background-color: #fff;
+		border-radius: 15px;
+		max-width: 480px;
 	}
 	.main__info-column {
-		min-width: 300px;
+		width: 100%;
 	}
 	.main__card {
 		width: 100px;
-		min-height: 120px;
+		padding: 10px;
 	}
 	.main__card-title {
 		font-size: 12px;
@@ -179,10 +183,10 @@
 		font-size: 14px;
 		font-weight: 500;
 	}
-	.main__day-deg{
+	.main__day-deg {
 		font-size: 16px;
 	}
-	.main_precip{
+	.main_precip {
 		font-size: 14px;
 	}
 }

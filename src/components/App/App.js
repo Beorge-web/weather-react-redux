@@ -13,7 +13,6 @@ function App() {
 		dispatch(weatherLoad());
 	}, []);
 	const isLoading = useSelector((state) => state.loaderReducer.loading);
-	console.log(isLoading);
 	useEffect(() => {
 		document.title = 'Погода';
 	});

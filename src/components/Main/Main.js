@@ -7,6 +7,7 @@ import precipIcon from '../../images/precip-icon.svg';
 import tempIcon from '../../images/temp-icon.svg';
 import windIcon from '../../images/wind-icon.svg';
 import visionIcon from '../../images/vision-icon.svg';
+import Spinner from '../Spinner.js/Spinner';
 
 function Main() {
 	const weather = useSelector((state) => {
@@ -58,7 +59,6 @@ function Main() {
 					</div>
 					<div className='main__cards main__cards_today '>
 						{!!forecast ? <MainCard name='Восход солнца' number={forecast[0].sunrise} text='' add='' icon='' /> : null}
-
 						{!!forecast ? <MainCard name='Закат солнца' number={forecast[0].sunset} text='' add='' icon='' /> : null}
 						<MainCard name='Ощущается как' number={Math.round(weather.feelslike)} text='с°' add={``} icon='' />
 					</div>

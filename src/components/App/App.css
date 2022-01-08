@@ -19,5 +19,12 @@ html {
 .root {
 	background-color: #e5e8ff;
 	min-height: 100vh;
-	background-color: #333866;
+}
+.loader {
+	display: flex;
+	min-height: calc(100vh - 104px);
+	justify-content: center;
+	align-content: center;
+	height: 100%;
+	width: 100%;
 }

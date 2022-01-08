@@ -3,22 +3,24 @@ import React, { useEffect } from 'react';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { weatherLoad } from '../../redux/actions';
+import Spinner from '../Spinner.js/Spinner';
 
 function App() {
 	const dispatch = useDispatch();
 	useEffect(() => {
 		dispatch(weatherLoad());
 	}, []);
-
+	const isLoading = useSelector((state) => state.loaderReducer.loading);
+	console.log(isLoading);
 	useEffect(() => {
 		document.title = 'Погода';
 	});
 	return (
 		<div className='root'>
 			<Header />
-			<Main />
+			{isLoading ? <Spinner /> : <Main />}
 			<Footer />
 		</div>
 	);

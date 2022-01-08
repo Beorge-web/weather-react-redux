@@ -1,4 +1,5 @@
 # Проект: Weather
+
 ## Описание
 
 Сайт для просмотра погоды в выбраном городе, данные берутся с 'https://www.weatherapi.com/'
@@ -15,13 +16,18 @@
 ## Установка и запуск
 
 1. Сколнируйте репозиторий:
-`git clone https://github.com/Beorge-web/weather-react-redux.git`
+   `git clone https://github.com/Beorge-web/weather-react-redux.git`
 2. Установите NPM пакеты:
-`npm install`
+   `npm install`
 3. Запуск проекта:
-`npm run start`
+   `npm run start`
+
+## GH pages
+
+Ссылка на github pages 'https://beorge-web.github.io/weather-react-redux/'
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

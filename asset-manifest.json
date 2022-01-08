@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/weather-react-redux/static/css/main.25a2d207.css",
-    "main.js": "/weather-react-redux/static/js/main.44131901.js",
+    "main.css": "/weather-react-redux/static/css/main.9b9750fb.css",
+    "main.js": "/weather-react-redux/static/js/main.3c4b6349.js",
     "static/media/Inter-Bold.woff": "/weather-react-redux/static/media/Inter-Bold.93c1301bd9f486c573b3.woff",
     "static/media/Inter-Medium.woff?v=3.16": "/weather-react-redux/static/media/Inter-Medium.4df6dba05b1c806c2ad2.woff",
     "static/media/Inter-SemiBold.woff": "/weather-react-redux/static/media/Inter-SemiBold.cca62d21c8c555c392e5.woff",
@@ -19,11 +19,11 @@
     "static/media/hum-icon.svg": "/weather-react-redux/static/media/hum-icon.b7cbbdc0b60e37ae5467a8bda66a143f.svg",
     "index.html": "/weather-react-redux/index.html",
     "static/media/iconmonstr-search-thin.svg": "/weather-react-redux/static/media/iconmonstr-search-thin.65a7fd1428ac118d9cf1.svg",
-    "main.25a2d207.css.map": "/weather-react-redux/static/css/main.25a2d207.css.map",
-    "main.44131901.js.map": "/weather-react-redux/static/js/main.44131901.js.map"
+    "main.9b9750fb.css.map": "/weather-react-redux/static/css/main.9b9750fb.css.map",
+    "main.3c4b6349.js.map": "/weather-react-redux/static/js/main.3c4b6349.js.map"
   },
   "entrypoints": [
-    "static/css/main.25a2d207.css",
-    "static/js/main.44131901.js"
+    "static/css/main.9b9750fb.css",
+    "static/js/main.3c4b6349.js"
   ]
 }

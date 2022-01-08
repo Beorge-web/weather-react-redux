@@ -29,7 +29,7 @@ class Api {
 }
 
 const apiData = {
-	url: 'http://api.weatherapi.com/v1/forecast.json?',
+	url: 'https://api.weatherapi.com/v1/forecast.json?',
 	headers: {
 		'Content-Type': 'application/json',
 	},

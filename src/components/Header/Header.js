@@ -5,7 +5,6 @@ import { searchWeather } from '../../redux/actions';
 function Header() {
 	const dispatch = useDispatch();
 	const [input, setInput] = useState('');
-	console.log(input);
 	return (
 		<div className='header'>
 			<div className='header__logo'>

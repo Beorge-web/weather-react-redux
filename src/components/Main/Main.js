@@ -17,8 +17,6 @@ function Main() {
 		const { weatherReducer } = state;
 		return weatherReducer.forecast;
 	});
-	console.log(weather);
-
 	return (
 		<div className='main'>
 			<div className='main__info'>

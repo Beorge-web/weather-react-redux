@@ -4,7 +4,6 @@ const initialState = {
 	data: {},
 };
 export const weatherReducer = (state = initialState, action) => {
-	console.log(action);
 	switch (action.type) {
 		case WEATHER:
 			const forecast = action.data.forecast.forecastday.map((d) => {

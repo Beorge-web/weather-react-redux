@@ -7,7 +7,6 @@ import precipIcon from '../../images/precip-icon.svg';
 import tempIcon from '../../images/temp-icon.svg';
 import windIcon from '../../images/wind-icon.svg';
 import visionIcon from '../../images/vision-icon.svg';
-import Spinner from '../Spinner.js/Spinner';
 
 function Main() {
 	const weather = useSelector((state) => {
@@ -24,7 +23,7 @@ function Main() {
 				<div className='main__info-column'>
 					<div className='main__info-title'></div>
 					<div className='main__cards'>
-						<MainCard name='Ветер' number={weather.wind} text='км/ч' add={weather.wind_dir} icon={windIcon} />
+						<MainCard name='Ветер' number={weather.wind} text='км/ч' add='' icon={windIcon} />
 						<MainCard name='Давление' number={Math.round(weather.pressure)} text='мм. рт. ст.' add='' icon={tempIcon} />
 						<MainCard name='Влажность' number={weather.humidity} text='%' add='' icon={humIcon} />
 						<MainCard name='Облачность' number={weather.cloud} text='%' add='' icon={cloudIcon} />

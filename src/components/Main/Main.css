@@ -142,3 +142,47 @@
 	font-size: 20px;
 	font-weight: bold;
 }
+@media screen and (max-width: 600px) {
+	.main__info {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.main__info-column {
+		min-width: 300px;
+	}
+	.main__card {
+		width: 100px;
+		min-height: 120px;
+	}
+	.main__card-title {
+		font-size: 12px;
+		font-weight: 500;
+	}
+	.main__card-info {
+		font-size: 14px;
+	}
+	.main__cards_today {
+		padding: 0;
+		width: 100%;
+	}
+	.main__degrees-image {
+		height: 50px;
+		width: 50px;
+	}
+	.main__degrees-number {
+		font-size: 60px;
+	}
+	.main__day-card {
+		padding: 10px;
+	}
+	.main__day-date {
+		font-size: 14px;
+		font-weight: 500;
+	}
+	.main__day-deg{
+		font-size: 16px;
+	}
+	.main_precip{
+		font-size: 14px;
+	}
+}

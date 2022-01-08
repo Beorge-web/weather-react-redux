@@ -11,12 +11,7 @@ function Header() {
 				<img className='header__logo-base' alt='Логотип' src={header__logo}></img>
 				<h1 className='header__logo-name'>Погода</h1>
 			</div>
-			<nav className='header__menu'>
-				<ul className='header__menu-items'>
-					{/* <li className='header__menu-item'>Главная</li> */}
-					{/* <li className='header__menu-item'>Погода сегодня</li>
-					<li className='header__menu-item'>Карта осадков</li> */}
-				</ul>
+			<div className='header__menu'>
 				<form
 					title='Введите город для поиска'
 					className='header__search-form'
@@ -36,7 +31,7 @@ function Header() {
 					/>
 					<button className='header__serach-button' type='submit'></button>
 				</form>
-			</nav>
+			</div>
 		</div>
 	);
 }

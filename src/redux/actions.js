@@ -18,13 +18,20 @@ export function weatherLoad() {
 }
 
 export function searchWeather(place) {
-	return (dispatch) =>
-		api.getCityWeather(place).then((res) => {
-			dispatch({
-				type: WEATHER,
-				data: res,
+	return (dispatch) => {
+		dispatch(loaderOn());
+		api
+			.getCityWeather(place)
+			.then((res) => {
+				dispatch({
+					type: WEATHER,
+					data: res,
+				});
+			})
+			.then(() => {
+				dispatch(loaderOff());
 			});
-		});
+	};
 }
 export function loaderOn() {
 	return {
